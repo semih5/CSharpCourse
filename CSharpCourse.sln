@@ -17,7 +17,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Inheritance", "Inheritance\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Constructors", "Constructors\Constructors.csproj", "{75E8EFC0-79B1-4DC1-9BD4-7EC6D2EBCCF2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdoNetDemo", "AdoNetDemo\AdoNetDemo.csproj", "{FC4D4134-6F39-4FFC-B042-0BD6AE7428E2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AdoNetDemo", "AdoNetDemo\AdoNetDemo.csproj", "{FC4D4134-6F39-4FFC-B042-0BD6AE7428E2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EntityFrameworkDemo", "EntityFrameworkDemo\EntityFrameworkDemo.csproj", "{008C47A4-941D-43E4-AF25-CCE00B1288D4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -57,6 +59,10 @@ Global
 		{FC4D4134-6F39-4FFC-B042-0BD6AE7428E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FC4D4134-6F39-4FFC-B042-0BD6AE7428E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FC4D4134-6F39-4FFC-B042-0BD6AE7428E2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{008C47A4-941D-43E4-AF25-CCE00B1288D4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{008C47A4-941D-43E4-AF25-CCE00B1288D4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{008C47A4-941D-43E4-AF25-CCE00B1288D4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{008C47A4-941D-43E4-AF25-CCE00B1288D4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -27,7 +27,7 @@ namespace AdoNetDemo
                     Name = reader["Name"].ToString(),
                     StockAmount = Convert.ToInt32(reader["StockAmount"]),
                     UnitPrice = Convert.ToDecimal(reader["UnitPrice"]),
-                };  
+                };
                 products.Add(product);
             }
             reader.Close();
@@ -67,10 +67,38 @@ namespace AdoNetDemo
         public void Add(Product product)
         {
             ConnectionControl();
-            SqlCommand command = new SqlCommand("Insert into Products values(@name, @unitPrice @stockAmount)", _connection);
+            SqlCommand command = new SqlCommand("Insert into Products values(@name, @unitPrice, @stockAmount)", _connection);
             command.Parameters.AddWithValue("@name", product.Name);
             command.Parameters.AddWithValue("@unitPrice", product.UnitPrice);
             command.Parameters.AddWithValue("@stockAmount", product.StockAmount);
+            command.ExecuteNonQuery();
+
+            _connection.Close();
+
+        }
+
+        public void Update(Product product)
+        {
+            ConnectionControl();
+            SqlCommand command = new SqlCommand(
+                "Update Products set Name=@name, UnitPrice=@unitPrice, StockAmount= @stockAmount where Id=@id", _connection);
+            command.Parameters.AddWithValue("@name", product.Name);
+            command.Parameters.AddWithValue("@unitPrice", product.UnitPrice);
+            command.Parameters.AddWithValue("@stockAmount", product.StockAmount);
+            command.Parameters.AddWithValue("@id", product.Id);
+
+            command.ExecuteNonQuery();
+
+            _connection.Close();
+
+        }
+        public void Delete(Product product)
+        {
+            ConnectionControl();
+            SqlCommand command = new SqlCommand(
+                "Delete from Products where Id=@id", _connection);
+            command.Parameters.AddWithValue("@id", id);
+
             command.ExecuteNonQuery();
 
             _connection.Close();
